@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{skak}
+\usepackage{fontawesome5}
+
+\begin{document}
+
+\[
+\begin{array}{rcl}
+  MOVE\,START & \rightarrow & Q_1 \cup Q_2 \cup Q_3 \cup Q_4 \cup Q_5 \cup Q_6 \cup Q_7 \cup Q_8 \\
+  Q_1 & \rightarrow & \text{Pawn Move} \\
+  Q_2 & \rightarrow & \text{Piece Move} \\
+  Q_3 & \rightarrow & \text{File Disamb.\,Piece Move} \\
+  Q_4 & \rightarrow & \text{Rank Disamb.\,Piece Move} \\
+  Q_5 & \rightarrow & \text{Doubly Disamb.\,Piece Move} \\
+  Q_6 & \rightarrow & \text{Promotion} \\
+  Q_7 & \rightarrow & \text{Kingside Castle} \\
+  Q_8 & \rightarrow & \text{Queenside Castle} \\
+  \text{Pawn Move} & \rightarrow & FXr[+|\#] \\
+  \text{Piece Move} & \rightarrow & PFXr[+|\#] \\
+  \text{File Disamb.\,Piece Move} & \rightarrow & PFFr[+|\#] \\
+  \text{Rank Disamb.\,Piece Move} & \rightarrow & PrXFr[+|\#] \\
+  \text{Doubly Disamb.\,Piece Move} & \rightarrow & PFrXFr[+|\#] \\
+  \text{Promotion} & \rightarrow & FR_P[+|\#] \\
+  \text{Kingside Castle} & \rightarrow & \text{O-O} \\
+  \text{Queenside Castle} & \rightarrow & \text{O-O-O} \\
+  X & \rightarrow & \epsilon \; | \; x \\
+  F & \rightarrow & a|b|c|d|e|f|g \\
+  r & \rightarrow & 1|2|3|4|5|6|7|8 \\
+  P & \rightarrow & \WhiteRookOnWhite|\WhiteQueenOnWhite|\WhiteBishopOnWhite|\WhiteKnightOnWhite|\WhiteKingOnWhite\\
+  R_P & \rightarrow & 1|8 
+\end{array}
+\]
+
+\end{document}
